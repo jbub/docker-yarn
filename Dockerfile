@@ -4,8 +4,7 @@ MAINTAINER Juraj Bubniak <contact@jbub.eu>
 ENV PATH /root/.yarn/bin:$PATH
 
 RUN apk --no-cache add curl bash binutils tar \
-  && /bin/bash \
-  && touch ~/.bashrc \
+  && touch /root/.bashrc \
   && curl -o- -L https://yarnpkg.com/install.sh | bash \
   && apk del curl tar binutils
 
