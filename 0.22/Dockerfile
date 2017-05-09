@@ -1,5 +1,5 @@
 FROM node:7.9-alpine
-MAINTAINER Juraj Bubniak <contact@jbub.eu>
+MAINTAINER Juraj Bubniak <juraj.bubniak@gmail.com>
 
 ENV YARN_VERSION=0.22.0
 ENV PATH /root/.yarn/bin:$PATH
