@@ -1,7 +1,8 @@
-FROM node:7.9-alpine
+
+FROM node:8.9.1-alpine
 MAINTAINER Juraj Bubniak <juraj.bubniak@gmail.com>
 
-ENV YARN_VERSION=0.21.3
+ENV YARN_VERSION=1.2.1
 ENV PATH /root/.yarn/bin:$PATH
 
 RUN apk --no-cache add gnupg curl bash binutils tar \
