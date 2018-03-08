@@ -13,8 +13,9 @@ import (
 )
 
 const (
-	image      = "jbub/docker-yarn"
-	maintainer = "Juraj Bubniak <juraj.bubniak@gmail.com>"
+	dockerImage      = "jbub/docker-yarn"
+	dockerBaseImage  = "node:9.7.1-alpine"
+	dockerMaintainer = "Juraj Bubniak <juraj.bubniak@gmail.com>"
 )
 
 type versionInfo struct {
@@ -26,16 +27,17 @@ type versionInfo struct {
 
 func (v versionInfo) tag(latest bool) string {
 	if latest {
-		return fmt.Sprintf("%v:latest", image)
+		return fmt.Sprintf("%v:latest", dockerImage)
 	}
-	return fmt.Sprintf("%v:%v", image, v.Name)
+	return fmt.Sprintf("%v:%v", dockerImage, v.Name)
 }
 
 var versions = []versionInfo{
-	{Name: "1.0", Version: "1.0.2", Image: "node:8.9.1-alpine", Maintainer: maintainer},
-	{Name: "1.1", Version: "1.1.0", Image: "node:8.9.1-alpine", Maintainer: maintainer},
-	{Name: "1.2", Version: "1.2.1", Image: "node:8.9.1-alpine", Maintainer: maintainer},
-	{Name: "1.3", Version: "1.3.2", Image: "node:8.9.1-alpine", Maintainer: maintainer},
+	{Name: "1.0", Version: "1.0.2", Image: dockerBaseImage, Maintainer: dockerMaintainer},
+	{Name: "1.1", Version: "1.1.0", Image: dockerBaseImage, Maintainer: dockerMaintainer},
+	{Name: "1.2", Version: "1.2.1", Image: dockerBaseImage, Maintainer: dockerMaintainer},
+	{Name: "1.4", Version: "1.4.1", Image: dockerBaseImage, Maintainer: dockerMaintainer},
+	{Name: "1.5", Version: "1.5.1", Image: dockerBaseImage, Maintainer: dockerMaintainer},
 }
 
 var dockerfileTmplString = `

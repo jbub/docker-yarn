@@ -1,5 +1,5 @@
 
-FROM node:8.9.1-alpine
+FROM node:9.7.1-alpine
 MAINTAINER Juraj Bubniak <juraj.bubniak@gmail.com>
 
 ENV YARN_VERSION=1.1.0
