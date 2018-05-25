@@ -14,7 +14,7 @@ import (
 
 const (
 	dockerImage      = "jbub/docker-yarn"
-	dockerBaseImage  = "node:9.7.1-alpine"
+	dockerBaseImage  = "node:9.11-alpine"
 	dockerMaintainer = "Juraj Bubniak <juraj.bubniak@gmail.com>"
 )
 
@@ -39,6 +39,7 @@ var versions = []versionInfo{
 	{Name: "1.4", Version: "1.4.1", Image: dockerBaseImage, Maintainer: dockerMaintainer},
 	{Name: "1.5", Version: "1.5.1", Image: dockerBaseImage, Maintainer: dockerMaintainer},
 	{Name: "1.6", Version: "1.6.0", Image: dockerBaseImage, Maintainer: dockerMaintainer},
+	{Name: "1.7", Version: "1.7.0", Image: dockerBaseImage, Maintainer: dockerMaintainer},
 }
 
 var dockerfileTmplString = `

@@ -1,5 +1,5 @@
 
-FROM node:9.7.1-alpine
+FROM node:9.11-alpine
 MAINTAINER Juraj Bubniak <juraj.bubniak@gmail.com>
 
 ENV YARN_VERSION=1.4.1
@@ -10,4 +10,4 @@ RUN apk --no-cache add gnupg curl bash binutils tar \
   && curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version ${YARN_VERSION} \
   && apk del gnupg curl tar binutils
 
-ENTRYPOINT [ "yarn" ]
+ENTRYPOINT [ "yarn" ]]
